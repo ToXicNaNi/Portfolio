@@ -105,7 +105,28 @@
           <p class="text-center text-body-secondary">© 2024 K, Inc</p>
         </footer>
       </div>
+    
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <script>
+        const mobileMenuButton = document.querySelector('button[aria-controls="mobile-menu"]');
+        const mobileMenu = document.getElementById('mobile-menu');
+      
+        mobileMenuButton.addEventListener('click', () => {
+          const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+          
+          // Toggle the aria-expanded attribute
+          mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+          
+          // Toggle the menu display
+          mobileMenu.classList.toggle('hidden', isExpanded);
+          
+          // Toggle SVG icons
+          mobileMenuButton.querySelector('svg:first-of-type').classList.toggle('hidden', !isExpanded);
+          mobileMenuButton.querySelector('svg:last-of-type').classList.toggle('hidden', isExpanded);
+        });
+      </script>
+    
+      
 </body>
 </html>   
       
