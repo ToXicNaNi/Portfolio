@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
             height: 100%;
@@ -23,6 +24,17 @@
             justify-content: center;
             align-items: center;
             margin-left: 35%;
+        }
+        .heading{
+          color: black;
+          display: flex;
+          flex: 1;
+          justify-content: center;
+          align-items: center;
+          height: 10vh;
+          font-size: 30px;
+          margin: 10px;
+          font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
         @media (max-width: 1200px) {
     .head-text {
@@ -62,20 +74,81 @@
     </style>
 </head>
 <body>
-    <div class="header py-5">
-        <h1 class="display-5 fw-bold text-white"></h1>
-        <div class="col-lg-6 mx-auto">
-            <img class="logo d-flex justify-content-center"  src="./images/logo.png" height="100px" width="100px">
-          <p class="head-text fs-5 mb-5 text-wrap">Here are my Projects which are done by using HTML , CSS, BootStrap, JavaScript and jQuery.</p>
+  <nav class="bg-gray-800">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">Open main menu</span>
+            <!--
+              Icon when menu is closed.
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!--
+              Icon when menu is open.
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <a href="./index.html"><div class="flex flex-shrink-0 items-center">
+            <img class="h-8 w-auto" src="./images/logo.png" alt="K">
+          </div> </a>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="./Resume.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" aria-current="page">Resume</a>
+              <a href="./projects.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+              <a href="./aboutme.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About Me</a>
+              <a href="./contactme.html" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact Me</a>
+            </div>
+          </div>
+        </div>
+          <!-- Profile dropdown -->
+            <!--
+              Dropdown menu, show/hide based on menu state.
+  
+              Entering: "transition ease-out duration-100"
+                From: "transform opacity-0 scale-95"
+                To: "transform opacity-100 scale-100"
+              Leaving: "transition ease-in duration-75"
+                From: "transform opacity-100 scale-100"
+                To: "transform opacity-0 scale-95"
+            -->
+          </div>
         </div>
       </div>
+    </div>
+  
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pb-3 pt-2">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="./Resume.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white" aria-current="page">Resume</a>
+        <a href="./projects.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+        <a href="./aboutme.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About Me</a>
+        <a href="./contactme.html" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact Me</a>
+      </div>
+    </div>
+  </nav>
+    <div class="heading"><h1>Here Are My Projects</h1></div>
     <div class="container">
     <div class="card" style="width: 18rem;">
         <img src="./images/resume.png" class="card-img-top" alt="Resume">
         <div class="card-body">
           <h5 class="card-title">Resume</h5>
           <p class="card-text">Built My Resume by using HTML. I have used some of the Tags for this.</p>
-          <a href="./Resume.html" class="btn btn-primary">Inspect</a>
+          <a href="./Resume.html" class="btn btn-primary" style="margin-top: 20px;">Inspect</a>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
@@ -83,7 +156,7 @@
         <div class="card-body">
           <h5 class="card-title">Web Design Agency</h5>
           <p class="card-text">Built this Website by using HTML and CSS. I have used some of the Tags and Styling for this.</p>
-          <a href="./Wed Design Agency Project/index.html" class="btn btn-primary">Inspect</a>
+          <a href="./Wed Design Agency Project/index.html" class="btn btn-primary " style="margin-top: 20px;">Inspect</a>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
@@ -91,7 +164,7 @@
         <div class="card-body">
           <h5 class="card-title">Tin Dog Project</h5>
           <p class="card-text">Built this Website by using HTML and CSS and BootStrap. I have used some of the Tags and Styling for this.</p>
-          <a href="./Tin Dog Project/index.html" class="btn btn-primary">Inspect</a>
+          <a href="./Tin Dog Project/index.html" class="btn btn-primary" style="margin-top: 20px;">Inspect</a>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
@@ -99,7 +172,7 @@
         <div class="card-body">
           <h5 class="card-title">Dice Challenge</h5>
           <p class="card-text">Built this Website by using HTML and CSS and JavaScript. I made it functional using JavaScript, it was funny to create this dice game.</p>
-          <a href="./Dicee Challenge - Starting Files 9.08.05 AM/dice.html" class="btn btn-primary">Inspect</a>
+          <a href="./Dicee Challenge - Starting Files 9.08.05 AM/dice.html" class="btn btn-primary" style="margin-top: 20px;">Inspect</a>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
@@ -107,7 +180,7 @@
         <div class="card-body">
           <h5 class="card-title">Drums Challenge</h5>
           <p class="card-text">Built this Website by using HTML, CSS, JavaScript. I have used some of the Tags and Styling for this and made it functional using JavaScript.That was funny playing with drums.</p>
-          <a href="./Drum Kit Completed/index.html" class="btn btn-primary">Inspect</a>
+          <a href="./Drum Kit Completed/index.html" class="btn btn-primary" style="margin-top: 20px;">Inspect</a>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
@@ -115,7 +188,7 @@
         <div class="card-body">
           <h5 class="card-title">Simon Game</h5>
           <p class="card-text">Built this Website by using HTML, CSS, JavaScript and jQuery. I have used some of the Tags and Styling for this and made it functional using JavaScript.</p>
-          <a href="./Simon Game Challenge Starting Files/index.html" class="btn btn-primary">Inspect</a>
+          <a href="./Simon Game Challenge Starting Files/index.html" class="btn btn-primary" style="margin-top: 20px;">Inspect</a>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
@@ -123,10 +196,41 @@
         <div class="card-body">
           <h5 class="card-title">To-do List</h5>
           <p class="card-text">Built this Website by using HTML, CSS, JavaScript. I have used some of the Tags and Styling for this and made it functional using JavaScript.</p>
-          <a href="./ To Do List/index.html" class="btn btn-primary">Inspect</a>
+          <a href="./ To Do List/index.html" class="btn btn-primary" style="margin-top: 20px;">Inspect</a>
         </div>
       </div>
     </div>
+
+    <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="./index.html" class="nav-link px-2 text-body-secondary">Home</a></li>
+          <li class="nav-item"><a href="./Resume.html" class="nav-link px-2 text-body-secondary">Resume</a></li>
+          <li class="nav-item"><a href="./projects.html" class="nav-link px-2 text-body-secondary">Projects</a></li>
+          <li class="nav-item"><a href="./aboutme.html" class="nav-link px-2 text-body-secondary">About Me</a></li>
+          <li class="nav-item"><a href="./contactme.html" class="nav-link px-2 text-body-secondary">Contact Me</a></li>
+        </ul>
+        <p class="text-center text-body-secondary">© 2024 K, Inc</p>
+      </footer>
+    </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+  const mobileMenuButton = document.querySelector('button[aria-controls="mobile-menu"]');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  mobileMenuButton.addEventListener('click', () => {
+    const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+    
+    // Toggle the aria-expanded attribute
+    mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+    
+    // Toggle the menu display
+    mobileMenu.classList.toggle('hidden', isExpanded);
+    
+    // Toggle SVG icons
+    mobileMenuButton.querySelector('svg:first-of-type').classList.toggle('hidden', !isExpanded);
+    mobileMenuButton.querySelector('svg:last-of-type').classList.toggle('hidden', isExpanded);
+  });
+</script>
 </body>
 </html>
